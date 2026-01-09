@@ -1,0 +1,13 @@
+*.csv
+*.json
+*.parquet
+*.zip
+
+# Carpetas de datos
+**/data/
+**/datasets/
+
+# PostgreSQL / Docker
+pgdata/
+volumes/
+

@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:18
+    container_name: dataset_db
+    restart: always
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dataset_db
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - volume:/var/lib/postgresql
+
+    networks:
+      - network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: dataset_pgadmin
+    restart: always
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+
+    ports:
+      - "81:80"
+
+    volumes:
+      - pgadmin_volume:/var/lib/pgadmin
+
+    networks:
+      - network
+
+volumes:
+  volume:
+  pgadmin_volume:
+
+networks:
+  network:
+    driver: bridge

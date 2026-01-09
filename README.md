@@ -1,9 +1,11 @@
+# SQL Practice Datasets
+
 Este repositorio contiene una serie de ejercicios prácticos de **SQL** 
 basados en datasets reales.
 
 Todo corre sobre **PostgreSQL** levantado con **Docker**. 
 Este espacio es para practicar queries, explorar datos y 
-mejorar mis habilidad usando SQL.
+mejorar mis habilidades usando SQL.
 
 ## Datasets
 
@@ -64,6 +66,19 @@ Para levantar el entorno:
 ```bash
 cd docker
 docker compose up -d
+```
+
+Para copiar la data al contenedor:
+
+```bash
+cd carpeta-sql
+docker cp /archivo.csv dataset_db:/tmp/archivo.csv
+```
+
+Para importar la data en la BD
+
+```
+COPY schema.tabla FROM '/tmp/archivo.csv' CSV HEADER;
 ```
 
 ## Objetivo final
