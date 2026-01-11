@@ -6,10 +6,6 @@ A medida que las consultas se vuelven más complejas, la legibilidad y
 mantenibilidad del SQL se vuelve crítica. Las CTEs permiten estructurar
 mejor las consultas y reutilizar cálculos intermedios.
 
-Este bloque se enfoca en resolver problemas analíticos utilizando CTEs.
-*/
-
-/*
 Preguntas:
 
 26. Calcular la tasa de abandono de empleados por ciudad utilizando un CTE.

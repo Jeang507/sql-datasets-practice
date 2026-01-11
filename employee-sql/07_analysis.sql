@@ -6,11 +6,6 @@ La empresa busca utilizar los datos disponibles para apoyar decisiones
 estratégicas relacionadas con retención de talento, compensación y
 planificación de recursos humanos.
 
-Este bloque simula preguntas reales que podrían surgir en reuniones
-ejecutivas o análisis de negocio.
-*/
-
-/*
 Preguntas:
 
 31. Analizar si existe relación entre haber sido benchado y la decisión

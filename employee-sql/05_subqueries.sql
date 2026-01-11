@@ -6,11 +6,6 @@ Para análisis más profundos, es necesario comparar el comportamiento
 individual de los empleados contra métricas globales o parciales, como
 promedios generales o promedios por grupo.
 
-Este tipo de análisis permite identificar empleados o segmentos que se
-comportan de forma atípica.
-*/
-
-/*
 Preguntas:
 
 21. Identificar empleados cuya edad sea superior al promedio general
