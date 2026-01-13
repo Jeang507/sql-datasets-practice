@@ -37,7 +37,7 @@ Indexes:
 '''
 
 -- 21)
-/*Identificar empleados cuya edad sea superior al promedio general
+/*Empleados cuya edad sea superior al promedio general
     de la empresa.*/
     
 SELECT ROUND(AVG(age),2) AS average_global FROM employee.employee;
@@ -58,7 +58,7 @@ WHERE age  > (SELECT AVG(age) FROM employee.employee);
 
 -- 22) 
 
-/* Identificar empleados cuya experiencia sea mayor al promedio de
+/* Empleados cuya experiencia sea mayor al promedio de
     su ciudad.*/
 
 SELECT city, ROUND(AVG(experience_in_current_domain),2) AS average_by_city
@@ -82,7 +82,7 @@ WHERE e2.city = e.city);
 
 -- 23) 
 
--- Determinar cuál es la ciudad con mayor número de empleados.
+-- Ciudad con mayor número de empleados.
 
 SELECT city, count(*) AS total_employees FROM employee.employee
 GROUP BY city ORDER BY total_employees DESC LIMIT 1;
@@ -95,7 +95,7 @@ GROUP BY city ORDER BY total_employees DESC LIMIT 1;
 '''
 -- 24) 
 
--- Identificar el año con mayor cantidad de contrataciones.
+-- Año con mayor cantidad de contrataciones.
 
 SELECT joining_year, COUNT(*) AS total_joining_year
 FROM employee.employee
@@ -111,7 +111,7 @@ LIMIT 1;
 '''
 -- 25) 
 
--- Determinar qué nivel salarial presenta la mayor tasa de abandono.
+-- Nivel salarial presenta la mayor tasa de abandono.
 
 SELECT payment_tier,ROUND(COUNT(*) FILTER 
 (WHERE leave_or_not = true)::DECIMAL / COUNT(*) * 100, 2) AS dropout_rate_percentage
