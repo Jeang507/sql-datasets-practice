@@ -8,7 +8,6 @@ de distintos sistemas internos. Antes de realizar análisis de rotación,
 rendimiento o retención de talento, es necesario comprender qué información
 contiene el dataset, cómo se distribuyen los datos y si existen patrones
 evidentes a simple vista.
-*/
 
 -- Preguntas:
 -- 1. Visualizar todos los registros disponibles en la tabla employee. ✔️
@@ -16,6 +15,7 @@ evidentes a simple vista.
 -- 3. Identificar a los empleados cuya edad supera los 30 años. ✔️
 -- 4. Extraer los registros correspondientes a empleados que trabajan en Bangalore. ✔️
 -- 5. Obtener el grupo de empleados que pertenecen al nivel salarial más alto. ✔️
+*/
 
 -- 1)
 
