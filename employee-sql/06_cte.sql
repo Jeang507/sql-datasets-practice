@@ -134,7 +134,6 @@ SELECT
 FROM gender_dropout
 ORDER BY dropout_rate_percentage DESC;
 
-
 -- 30. Generar un resumen de métricas clave para un dashboard de RRHH utilizando CTEs.
 
 WITH base_metrics AS (
@@ -146,9 +145,8 @@ WITH base_metrics AS (
 city_with_highest_dropout AS (
     SELECT
         city,
-        ROUND(
-            COUNT(*) FILTER (WHERE leave_or_not = true)::DECIMAL / COUNT(*) * 100, 2) 
-            AS dropout_rate
+        ROUND(COUNT(*) FILTER (WHERE leave_or_not = true)::DECIMAL / COUNT(*) * 100, 2) 
+        AS dropout_rate
     FROM employee.employee
     GROUP BY city
     ORDER BY dropout_rate DESC
@@ -168,4 +166,4 @@ SELECT
     c.city AS highest_dropout_city,
     c.dropout_rate AS highest_city_dropout_rate
 FROM base_metrics bm
-CROSS JOIN city_with_highest_dropout c;
+CROSS JOIN city_with_highest_dropout c; -- Proximamente 
