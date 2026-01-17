@@ -229,11 +229,8 @@ SELECT
     END AS experience_group,
     COUNT(*) AS total_employees,
     COUNT(*) FILTER (WHERE leave_or_not = true) AS abandoned_employees,
-    ROUND(
-        COUNT(*) FILTER (WHERE leave_or_not = true)::DECIMAL
-        / COUNT(*) * 100,
-        2
-    ) AS turnover_rate_percentage
+    ROUND(COUNT(*) FILTER (WHERE leave_or_not = true)::DECIMAL / COUNT(*) * 100, 2) 
+    AS turnover_rate_percentage
 FROM employee.employee
 GROUP BY
     city,
