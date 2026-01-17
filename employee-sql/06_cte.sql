@@ -14,6 +14,7 @@ de experiencia.
 utilizando CTEs.
 */
 -- 26)
+
 -- Tasa de abandono de empleados por ciudad utilizando un CTE.
 WiTH abandoned_by_city AS
      (
@@ -40,6 +41,7 @@ Bangalore |                     26.71
 (3 rows)
 '''
 -- 27)
+
 -- Empleados en Junior, Mid y Senior según sus años de experiencia.
 
 SELECT
@@ -81,7 +83,9 @@ GROUP BY
 ORDER BY
     years_of_experience DESC;
 
--- 28. Construir un ranking de ciudades ordenado por tasa de abandono.
+-- 28)
+
+-- Construir un ranking de ciudades ordenado por tasa de abandono.
 
 WITH dropout_rate_ranking AS
      (
@@ -115,7 +119,9 @@ ranking |   city    | total_dropouts | dropout_rate_percentage
 (3 rows)
 ''' 
 
--- 29. Comparar la tasa de abandono entre empleados hombres y mujeres.
+-- 29)
+
+-- Tasa de abandono entre empleados hombres y mujeres.
 
 WITH gender_dropout AS (
     SELECT
@@ -134,7 +140,9 @@ SELECT
 FROM gender_dropout
 ORDER BY dropout_rate_percentage DESC;
 
--- 30. Generar un resumen de métricas clave para un dashboard de RRHH utilizando CTEs.
+-- 30)
+
+-- Resumen de métricas clave para un dashboard de RRHH utilizando CTEs.
 
 WITH base_metrics AS (
     SELECT
